@@ -1,0 +1,4 @@
+team,requests,mean_cycle_hours,sla_pct,rework_pct
+Finance,297,68.12,61.95,21.21
+Operations,357,44.67,97.2,19.61
+Sales,346,42.89,98.27,20.52

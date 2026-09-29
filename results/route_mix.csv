@@ -1,0 +1,7 @@
+team,route,requests,mean_cycle_hours,mean_review_hours
+Finance,Complex,151,79.22,54.18
+Finance,Standard,146,56.64,35.6
+Operations,Complex,192,54.8,30.04
+Operations,Standard,165,32.88,11.76
+Sales,Complex,158,53.23,29.79
+Sales,Standard,188,34.2,12.13

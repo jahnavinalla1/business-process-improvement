@@ -1,0 +1,4 @@
+adoption_pct,assumed_annual_volume,touch_hours_saved,hourly_cost,build_cost,annual_running_cost,annual_capacity_value,annual_net_value,year1_net_value,payback_months
+40,12000,0.2,45,25000,12000,43200.0,31200.0,6200.0,9.62
+65,12000,0.2,45,25000,12000,70200.0,58200.0,33200.0,5.15
+85,12000,0.2,45,25000,12000,91800.0,79800.0,54800.0,3.76

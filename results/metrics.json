@@ -1,0 +1,185 @@
+{
+  "title": "Approval workflow and automation business case",
+  "question": "Should a team pilot structured intake and approval routing?",
+  "kpis": {
+    "Requests": "1,000",
+    "Mean cycle time": "51.0 hours",
+    "72-hour SLA": "87.1%",
+    "90th percentile": "76 hours"
+  },
+  "tables": {
+    "team_performance": [
+      {
+        "team": "Finance",
+        "requests": 297,
+        "mean_cycle_hours": 68.12,
+        "sla_pct": 61.95,
+        "rework_pct": 21.21
+      },
+      {
+        "team": "Operations",
+        "requests": 357,
+        "mean_cycle_hours": 44.67,
+        "sla_pct": 97.2,
+        "rework_pct": 19.61
+      },
+      {
+        "team": "Sales",
+        "requests": 346,
+        "mean_cycle_hours": 42.89,
+        "sla_pct": 98.27,
+        "rework_pct": 20.52
+      }
+    ],
+    "route_mix": [
+      {
+        "team": "Finance",
+        "route": "Complex",
+        "requests": 151,
+        "mean_cycle_hours": 79.22,
+        "mean_review_hours": 54.18
+      },
+      {
+        "team": "Finance",
+        "route": "Standard",
+        "requests": 146,
+        "mean_cycle_hours": 56.64,
+        "mean_review_hours": 35.6
+      },
+      {
+        "team": "Operations",
+        "route": "Complex",
+        "requests": 192,
+        "mean_cycle_hours": 54.8,
+        "mean_review_hours": 30.04
+      },
+      {
+        "team": "Operations",
+        "route": "Standard",
+        "requests": 165,
+        "mean_cycle_hours": 32.88,
+        "mean_review_hours": 11.76
+      },
+      {
+        "team": "Sales",
+        "route": "Complex",
+        "requests": 158,
+        "mean_cycle_hours": 53.23,
+        "mean_review_hours": 29.79
+      },
+      {
+        "team": "Sales",
+        "route": "Standard",
+        "requests": 188,
+        "mean_cycle_hours": 34.2,
+        "mean_review_hours": 12.13
+      }
+    ],
+    "stages": [
+      {
+        "stage": "Intake",
+        "mean_elapsed_hours": 4.57
+      },
+      {
+        "stage": "Review",
+        "mean_elapsed_hours": 28.07
+      },
+      {
+        "stage": "Approval",
+        "mean_elapsed_hours": 8.53
+      },
+      {
+        "stage": "Execution",
+        "mean_elapsed_hours": 6.94
+      },
+      {
+        "stage": "Rework",
+        "mean_elapsed_hours": 2.9
+      }
+    ],
+    "business_case_scenarios": [
+      {
+        "adoption_pct": 40,
+        "assumed_annual_volume": 12000,
+        "touch_hours_saved": 0.2,
+        "hourly_cost": 45,
+        "build_cost": 25000,
+        "annual_running_cost": 12000,
+        "annual_capacity_value": 43200.0,
+        "annual_net_value": 31200.0,
+        "year1_net_value": 6200.0,
+        "payback_months": 9.62
+      },
+      {
+        "adoption_pct": 65,
+        "assumed_annual_volume": 12000,
+        "touch_hours_saved": 0.2,
+        "hourly_cost": 45,
+        "build_cost": 25000,
+        "annual_running_cost": 12000,
+        "annual_capacity_value": 70200.0,
+        "annual_net_value": 58200.0,
+        "year1_net_value": 33200.0,
+        "payback_months": 5.15
+      },
+      {
+        "adoption_pct": 85,
+        "assumed_annual_volume": 12000,
+        "touch_hours_saved": 0.2,
+        "hourly_cost": 45,
+        "build_cost": 25000,
+        "annual_running_cost": 12000,
+        "annual_capacity_value": 91800.0,
+        "annual_net_value": 79800.0,
+        "year1_net_value": 54800.0,
+        "payback_months": 3.76
+      }
+    ],
+    "cycle_summary": [
+      {
+        "requests": 1000,
+        "mean_hours": 51.02,
+        "p90_hours": 76,
+        "sla_pct": 87.1
+      }
+    ]
+  },
+  "findings": [
+    "Review accounts for 55.0% of mean elapsed cycle time.",
+    "Finance has the highest average cycle time; route mix is exposed for a fairer comparison.",
+    "The 65%-adoption scenario values annual capacity at $70,200, with a modeled 5.15-month payback."
+  ],
+  "actions": [
+    "Pilot validated intake forms and explicit approval routing in one team, with exception handling and an audit log.",
+    "Time actual employee touch work before accepting the 0.20-hour savings assumption; elapsed waiting time is not paid effort.",
+    "Compare a pilot team with a matched control over four weeks; track p90 cycle time, rework, SLA compliance and overrides."
+  ],
+  "limitations": "Synthetic completed requests only; open backlog and calendar effects are omitted. Stage durations are elapsed hours. All volumes, labor rates, adoption, effort savings and costs in the business case are planning assumptions, not inferred from elapsed time. Capacity value is not cash savings unless spending is actually reduced. No realized improvement is claimed.",
+  "chart": {
+    "title": "Where time accumulates",
+    "note": "Mean elapsed hours per completed request; stages are sequential and include waiting.",
+    "unit": " h",
+    "rows": [
+      {
+        "label": "Intake",
+        "value": 4.57
+      },
+      {
+        "label": "Review",
+        "value": 28.07
+      },
+      {
+        "label": "Approval",
+        "value": 8.53
+      },
+      {
+        "label": "Execution",
+        "value": 6.94
+      },
+      {
+        "label": "Rework",
+        "value": 2.9
+      }
+    ]
+  }
+}
